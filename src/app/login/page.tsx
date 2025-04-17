@@ -23,7 +23,7 @@ export default function LoginPage() {
   
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-3xl font-bold mb-8">Instagram Login</h1>
+      <h1 className="text-3xl font-bold mb-8">Empathy Social App</h1>
       
       <Link 
         href="/api/auth/instagram" 

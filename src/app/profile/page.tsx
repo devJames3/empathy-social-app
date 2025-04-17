@@ -55,7 +55,7 @@ export default function ProfilePage() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <span className="font-bold text-xl bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text">
-                InstaNext
+                EmpathyApp
               </span>
             </div>
             <div>
@@ -98,7 +98,7 @@ export default function ProfilePage() {
                 {profile.account_type}
               </div>
               <p className="mt-2 text-sm text-gray-500">
-                Instagram user connected with Next.js
+                Instagram user connected with Empathy
               </p>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function ProfilePage() {
       <footer className="bg-white border-t border-gray-200 mt-8">
         <div className="max-w-5xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-gray-500">
-            Instagram Next.js Integration &copy; {new Date().getFullYear()}
+            Empathy App &copy; {new Date().getFullYear()}
           </p>
         </div>
       </footer>

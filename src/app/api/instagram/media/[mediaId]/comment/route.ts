@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { mediaId: string } }
+  { params }: { params: Promise<{ mediaId: string }> }
 ) {
   const resolvedParams = await params;
   const mediaId =  resolvedParams.mediaId;
