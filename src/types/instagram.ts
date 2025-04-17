@@ -26,3 +26,13 @@ export interface InstagramMediaResponse {
     next?: string;
   };
 }
+
+export interface InstagramComment {
+  id: string;
+  text: string;
+  timestamp: string;
+  username?: string;
+  replies?: {
+    data: InstagramComment[];
+  }
+}

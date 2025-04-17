@@ -18,7 +18,7 @@ export async function GET() {
     }
 
     const profileData = await profileResponse.json();
-    console.log({profile_data: profileData})
+
     return NextResponse.json({ profile: profileData });
   } catch (error) {
     console.error('Error fetching Instagram profile:', error);

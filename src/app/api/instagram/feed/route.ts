@@ -10,7 +10,7 @@ export async function GET() {
   }
 
   try {
-    // Get user's media
+    
     const mediaResponse = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${accessToken}`);
     
     if (!mediaResponse.ok) {
@@ -18,7 +18,7 @@ export async function GET() {
     }
 
     const mediaData = await mediaResponse.json();
-    console.log({media_data: mediaData})
+
     return NextResponse.json({ media: mediaData });
   } catch (error) {
     console.error('Error fetching Instagram media:', error);

@@ -34,9 +34,8 @@ export async function GET(request: NextRequest) {
     }
 
     const tokenData = await tokenResponse.json();
-    const { access_token, user_id } = tokenData;
+    const { access_token } = tokenData;
 
-    // Get long-lived access token
     const longLivedTokenResponse = await fetch(`https://graph.instagram.com/access_token?grant_type=ig_exchange_token&client_secret=${INSTAGRAM_APP_SECRET}&access_token=${access_token}`);
     
     if (!longLivedTokenResponse.ok) {
@@ -54,21 +53,20 @@ export async function GET(request: NextRequest) {
     }
 
     const userData = await userDataResponse.json();
-    console.log({user_data: userData})
 
     // Store token and user data in cookies
     const cookieStore = await cookies();
     cookieStore.set('instagram_access_token', longLivedToken, { 
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      maxAge: 60 * 60 * 24 * 60, // 60 days
+      maxAge: 60 * 60 * 24 * 60, 
       path: '/'
     });
     
     cookieStore.set('instagram_user_id', userData.id, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      maxAge: 60 * 60 * 24 * 60, // 60 days
+      maxAge: 60 * 60 * 24 * 60,
       path: '/'
     });
 

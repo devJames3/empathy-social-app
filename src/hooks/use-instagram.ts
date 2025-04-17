@@ -42,7 +42,7 @@ export function useInstagramProfile() {
         }
         
         const data = await res.json();
-        console.log({profile_data: data})
+
         setProfile(data.profile);
       } catch (error) {
         console.error('Error fetching Instagram profile:', error);
@@ -73,7 +73,7 @@ export function useInstagramFeed() {
         }
         
         const data = await res.json();
-        console.log({media_data: data})
+
         setMedia(data.media.data);
       } catch (error) {
         console.error('Error fetching Instagram media:', error);
