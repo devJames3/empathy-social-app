@@ -93,7 +93,7 @@ function CommentForm({ onSubmit, placeholder = 'Add a comment...' }: CommentForm
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder={placeholder}
-        className="flex-1 border border-gray-300 rounded-l-full px-4 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-colors text-sm"
+        className="flex-1 border border-gray-300 rounded-l-full px-4 py-2 focus:outline-none text-gray-600 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-colors text-sm"
         disabled={isSubmitting}
       />
       <button
