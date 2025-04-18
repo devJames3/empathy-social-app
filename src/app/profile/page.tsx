@@ -50,7 +50,7 @@ export default function ProfilePage() {
   const Logout = () => {
 
     const handleLogout = async () => {
-      await fetch('/api/logout');
+      await fetch('/api/auth/logout');
     };
 
     return(
