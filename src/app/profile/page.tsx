@@ -50,17 +50,10 @@ export default function ProfilePage() {
   const Logout = () => {
 
     const handleLogout = async () => {
-      const res = await fetch('/api/auth/logout', {
-        method: 'POST',
-        credentials: 'include',
-      });
-
-      if (res.ok) {
-        console.log("logout successful")
-      }
+      await fetch('/api/logout');
     };
-    return(
 
+    return(
         <button 
           onClick={handleLogout}
           className="inline-flex items-center bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
