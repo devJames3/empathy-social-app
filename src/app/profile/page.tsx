@@ -60,6 +60,7 @@ export default function ProfilePage() {
             </div>
             <div>
               <Link 
+                prefetch={false}
                 href="/api/auth/logout" 
                 className="inline-flex items-center bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
