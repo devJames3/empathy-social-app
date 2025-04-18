@@ -47,26 +47,6 @@ export default function ProfilePage() {
     );
   }
   
-  const Logout = () => {
-
-    const handleLogout = async () => {
-      await fetch('/api/auth/logout');
-    };
-
-    return(
-        <button 
-          onClick={handleLogout}
-          className="inline-flex items-center bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-        >
-          <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-          </svg>
-          Logout
-        </button>
-    )
-  }
-
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -78,8 +58,17 @@ export default function ProfilePage() {
                 EmpathyApp
               </span>
             </div>
-            <div>           
-              <Logout />
+            <div>
+              <Link 
+                prefetch={false}
+                href="/api/auth/logout" 
+                className="inline-flex items-center bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                Logout
+              </Link>
             </div>
           </div>
         </div>
