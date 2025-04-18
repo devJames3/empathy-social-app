@@ -63,7 +63,6 @@ export default function ProfilePage() {
 
         <button 
           onClick={handleLogout}
-          type='submit'
           className="inline-flex items-center bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
         >
           <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
